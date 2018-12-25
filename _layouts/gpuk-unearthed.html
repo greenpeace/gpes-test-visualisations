@@ -1,0 +1,998 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-GB" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" lang="en-GB" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" lang="en-GB" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-GB" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {{ site.title }} - Unearthed
+    </title>
+
+    <link rel="stylesheet" href="https://unearthed.greenpeace.org/wp-content/themes/unearthed/dist/main.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now()])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1099.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:app_id" content="517047128646306" />
+    <link rel="pingback" href="https://unearthed.greenpeace.org/xmlrpc.php" />
+
+    <!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Indonesia and Malaysia tried to push UK on Iceland’s palm oil ban</title>
+    <meta name="description" content="Emails from British diplomats reveal that three government departments were involved in response to supermarket’s move, which provoked anger in southeast Asia" />
+    <meta name="news_keywords" content="" />
+    <meta name="original-source" content="https://unearthed.greenpeace.org/2018/12/05/palm-oil-iceland-rangtan-advert/" />
+    <link rel="canonical" href="https://unearthed.greenpeace.org/2018/12/05/palm-oil-iceland-rangtan-advert/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Indonesia and Malaysia tried to push UK on Iceland’s palm oil ban" />
+    <meta property="og:description" content="Emails from British diplomats reveal that three government departments were involved in response to supermarket’s move, which provoked anger in southeast Asia" />
+    <meta property="og:url" content="https://unearthed.greenpeace.org/2018/12/05/palm-oil-iceland-rangtan-advert/" />
+    <meta property="og:site_name" content="Unearthed" />
+    <meta property="article:publisher" content="https://www.facebook.com/greenpeace.unearthed" />
+    <meta property="article:section" content="Forests" />
+    <meta property="article:published_time" content="2018-12-05T00:01:11+00:00" />
+    <meta property="article:modified_time" content="2018-12-03T17:36:35+00:00" />
+    <meta property="og:updated_time" content="2018-12-03T17:36:35+00:00" />
+    <meta property="og:image" content="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-1024x683.jpg" />
+    <meta property="og:image:secure_url" content="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-1024x683.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="683" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Emails from British diplomats reveal that three government departments were involved in response to supermarket’s move, which provoked anger in southeast Asia" />
+    <meta name="twitter:title" content="Indonesia and Malaysia tried to push UK on Iceland’s palm oil ban" />
+    <meta name="twitter:site" content="@ue" />
+    <meta name="twitter:image" content="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia.jpg" />
+    <meta name="twitter:creator" content="@JSandlerClarke" />
+    <script type='application/ld+json'>
+        {
+            "@context": "https:\/\/schema.org",
+            "@type": "Organization",
+            "url": "https:\/\/unearthed.greenpeace.org\/",
+            "sameAs": ["https:\/\/www.facebook.com\/greenpeace.unearthed", "https:\/\/twitter.com\/ue"],
+            "@id": "https:\/\/unearthed.greenpeace.org\/#organization",
+            "name": "Unearthed",
+            "logo": "https:\/\/unearthed.greenpeace.org\/wp-content\/uploads\/2017\/09\/UELogo.png"
+        }
+    </script>
+    <!-- / Yoast SEO plugin. -->
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/unearthed.greenpeace.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"
+            }
+        };
+        ! function(a, b, c) {
+            function d(a, b) {
+                var c = String.fromCharCode;
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+                var d = k.toDataURL();
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+                var e = k.toDataURL();
+                return d === e
+            }
+
+            function e(a) {
+                var b;
+                if (!l || !l.fillText) return !1;
+                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+                    case "flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
+                    case "emoji":
+                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
+                }
+                return !1
+            }
+
+            function f(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+            var g, h, i, j, k = b.createElement("canvas"),
+                l = k.getContext && k.getContext("2d");
+            for (j = Array("flag", "emoji"), c.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function() {
+                c.DOMReady = !0
+            }, c.supports.everything || (h = function() {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function() {
+                "complete" === b.readyState && c.readyCallback()
+            })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='https://api.w.org/' href='https://unearthed.greenpeace.org/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://unearthed.greenpeace.org/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://unearthed.greenpeace.org/wp-includes/wlwmanifest.xml" />
+    <link rel='shortlink' href='https://unearthed.greenpeace.org/?p=12991' />
+    <link rel="alternate" type="application/json+oembed" href="https://unearthed.greenpeace.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Funearthed.greenpeace.org%2F2018%2F12%2F05%2Fpalm-oil-iceland-rangtan-advert%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://unearthed.greenpeace.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Funearthed.greenpeace.org%2F2018%2F12%2F05%2Fpalm-oil-iceland-rangtan-advert%2F&#038;format=xml" />
+    <link rel="amphtml" href="https://unearthed.greenpeace.org/2018/12/05/palm-oil-iceland-rangtan-advert/amp/">
+    <link rel="icon" href="https://unearthed.greenpeace.org/wp-content/uploads/2017/07/cropped-site-icon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://unearthed.greenpeace.org/wp-content/uploads/2017/07/cropped-site-icon-300x300.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://unearthed.greenpeace.org/wp-content/uploads/2017/07/cropped-site-icon-300x300.png" />
+    <meta name="msapplication-TileImage" content="https://unearthed.greenpeace.org/wp-content/uploads/2017/07/cropped-site-icon-300x300.png" />
+    <style type="text/css" media="screen">
+        html {
+            margin-top: 0px !important;
+        }
+
+        * html body {
+            margin-top: 0px !important;
+        }
+
+        #wpadminbar {
+            opacity: 0.4
+        }
+
+        #wpadminbar:hover {
+            opacity: 1
+        }
+    </style>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-57254240-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <meta name="google-site-verification" content="Iu6-aHuci9RxQCpwPrWEnDpnEMBSP7NQfUsf7KYwQho" />
+
+</head>
+
+<body class="post-template-default single single-post postid-12991 single-format-investigation" data-template="base.twig">
+    <header class="header">
+        <div class="wrapper container">
+
+            <div class="main-logo" role="banner">
+                <a class="main-logo-link" href="/" title="Unearthed" rel="home" onclick="ga('send','event', 'Link', 'Header', 'Logo' );">
+
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="223px" height="26px" viewBox="0 0 223 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components:-Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos/Brand/Unearthed-Black">
+            <g id="Group">
+                <path d="M218,17 C218,18.9721503 216.374772,20 214,20 L210,20 L210,5 L214,5 C216.260929,5 218,5.90592617 218,8 L218,17 Z M205,0 L205,25 L215,25 C219.441708,25 223,21.5947677 223,17 L223,8 C223,3.4416263 219.51785,0 215,0 L205,0 Z" id="D" fill="#0A0B09"></path>
+                <g id="E" transform="translate(180.000000, 0.000000)" fill="#0A0B09">
+                    <polygon id="Fill-2" points="0 25 13 25 13 20 0 20"></polygon>
+                    <polygon id="Fill-3" points="0 15 13 15 13 10 0 10"></polygon>
+                    <polyline id="Fill-4" points="0 4.45144701 0.00642383171 5 13 5 13 0 0 0 0 4.45144701"></polyline>
+                </g>
+                <polygon id="H" fill="#0A0B09" points="153 10 153 15 163 15 163 25 168 25 168 0 163 0 163 10"></polygon>
+                <polygon id="T" fill="#0A0B09" points="135 5 135 25 140 25 140 5 147 5 147 0 128 0 128 5"></polygon>
+                <path d="M120,9 L120,8 L120,7 C119.758406,3.30150915 116.394366,-3.90798505e-14 112,-3.90798505e-14 L104,-3.90798505e-14 L104,5 L112,5 C113.63228,4.94375726 114.743814,6.01757336 115,7 L115,8 L115,9 C114.743814,10.5069853 113.63228,11.5808014 112,12 L104,12 L104,17 L109,17 L114,25 L120,25 L115,16 C117.656135,15.0954726 119.758406,12.3714023 120,9 Z" id="R" fill="#000000"></path>
+                <polygon id="A" fill="#000000" points="81 0.000400297822 86 14.0004003 79 14.0004003 79 19.0004003 88 19.0004003 90 25.0004003 96 25.0004003 87 0.000400297822"></polygon>
+                <g id="E" transform="translate(55.000000, 0.000000)" fill="#0A0B09">
+                    <polygon id="Fill-2-Copy" points="0 25 13 25 13 20 0 20"></polygon>
+                    <polygon id="Fill-3-Copy" points="0 15 13 15 13 10 0 10"></polygon>
+                    <polygon id="Fill-4-Copy" points="0.00642383171 5 13 5 13 0 0 0 0 4.45144701"></polygon>
+                </g>
+                <polygon id="N" fill="#000000" points="38 0.000400297822 38 16.0004003 28 0.000400297822 28 0.000400297822 28 9.0004003 38 25.0004003 38 25.0004003 43 25.0004003 43 0.000400297822"></polygon>
+                <path d="M13,17 C13.1913674,19.0513995 12.2313933,20.9720102 10,21 L9,21 L8,21 C5.82897014,20.9720102 4.80960623,19.178626 5,17 L5,0 L0,0 L0,17 C0,22.2860051 3.49134574,26 8,26 L9,26 L10,26 C14.4658157,26 18,22.3643766 18,17 L18,0 L13,0 L13,17 Z" id="U" fill="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+                </a>
+            </div>
+            <div class="button-group-left">
+                <a href="/join-us/" class="button pink d-none d-sm-inline-block join-us-btn"><span>Join Us</span></a> <a href="/about/" class="button grey d-none d-sm-inline-block about-btn"><span>About</span></a>
+                <a class="d-sm-none menu-btn collapsed" href="#">
+	            <img class="burger" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.png'; this.onerror=null;">
+	            <img class="cross" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.png'; this.onerror=null;">
+	          </a>
+
+            </div>
+            <div class="button-group-right">
+                <a href="/search" class="button pink search-btn icon-right d-none d-md-inline-block"><span>Search</span></a>
+                <a class="d-md-none search-button-mobile" href="/search">
+	            <img alt="Unearthed" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/search-icon-red.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/search-icon-red.png'; this.onerror=null;">
+	          </a>
+                <a class="d-lg-none d-none d-sm-inline-block menu-btn collapsed" href="#">
+	            <img class="burger" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.png'; this.onerror=null;">
+	            <img class="cross" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.png'; this.onerror=null;">
+	          </a>
+                <a class="d-none d-lg-inline-block menu-btn-lg collapsed" href="#">
+	            <img class="burger" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/burger-black.png'; this.onerror=null;">
+	            <img class="cross" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-black.png'; this.onerror=null;">
+	          </a>
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav-main" class="nav nav-main clearfix collapsed" role="navigation">
+        <div class="nav__primary">
+            <ul class="container clearfix">
+                <li>
+                    <a href="https://unearthed.greenpeace.org/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - Home' );">Home</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/energy/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - Energy' );">Energy</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/forests/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - Forests' );">Forests</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/oceans/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - Oceans' );">Oceans</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/uk/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - UK' );">UK</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/china/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - China' );">China</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/world/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - World' );">World</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/investigations/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 1 - Investigations' );">Investigations</a>
+                    <hr>
+                </li>
+                <li class="collapsed--button" id="nav-more">
+                    <a href="#">
+                    <span class="more">
+                        <img class="burger"
+                             src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/icon-more-grey-light.svg"
+                             onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/icon-more-grey-light.png'; this.onerror=null;">MORE</span>
+                    <span class="less">
+                        <img class="burger" src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-white.svg"
+                             onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/cross-white.png'; this.onerror=null;">LESS</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav__expand nav__expand--a">
+            <ul class="container clearfix">
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/politics/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Politics');">Politics</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/brexit/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Brexit');">Brexit</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/fracking/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Fracking');">Fracking</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/air-pollution/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Air pollution');">Air pollution</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/brazil/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Brazil');">Brazil</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/us/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - United States');">United States</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/category/videos/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 2 - Videos');">Videos</a>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+        <div class="nav__expand nav__expand--b">
+            <ul class="container clearfix">
+                <li>
+                    <a href="https://unearthed.greenpeace.org/about/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 3 - About');">About</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/contact-us/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 3 - Contact');">Contact</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="https://unearthed.greenpeace.org/join-us/" target="" onclick="ga('send','event', 'Link', 'Header', 'Menu 3 - Join us');">Join us</a>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main id="content" role="main" class="content-wrapper">
+        <div class="wrapper">
+
+            <!-- Template: 3 -->
+
+
+            <div class="content-wrapper">
+                <article class="post-type-post " id="post-12991">
+
+                    <section class="article-content acf-layout">
+                        <div class="hero image">
+                            <div class="gradient"></div>
+                            <img data-src="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-764x505.jpg" src="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-764x505.jpg" size="100vw" data-srcset="https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-764x505.jpg 764w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-1016x505.jpg 1016w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-1280x505.jpg 1280w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-1436x560.jpg 1436w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-2032x1010.jpg 2032w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-2499x1010.jpg 2500w,
+	   https://unearthed.greenpeace.org/wp-content/uploads/2018/11/GP04V6D_PressMedia-slight-crop-2499x1120.jpg 2500w">
+                            <div class="container">
+                                <div class="article-header-row row">
+                                    <div class="col-lg-3">
+                                        <div class="hero-text">
+                                            <p class="hero-excerpt">Photo: Ulet Ifansasti/Greenpeace</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-9 col-lg-6">
+                                        <div class="hero-text main-text">
+                                            <h1 class="title-text article-h1 h3">
+                                                {{ site.title }}
+                                            </h1>
+                                            <p class="standfirst">'It is not for us to argue the case for palm oil,' wrote British diplomats</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3"></div>
+                                </div>
+                            </div>
+                            <div class="hero-caption-mobile">
+                                <div class="container">
+                                    <p class="hero-excerpt">Photo: Ulet Ifansasti/Greenpeace</p>
+                                    <a href="#" class="button-round grey caption show"></a> </div>
+                            </div>
+                        </div>
+                        <div class="container hero-mobile">
+                            <div class="article-header-row row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-9 col-lg-6">
+                                    <h2 class="title-text article-h1 h3">
+                                        Indonesia and Malaysia tried to push UK government to take action over Iceland’s palm oil ban
+                                    </h2>
+                                    <p class="standfirst">'It is not for us to argue the case for palm oil,' wrote British diplomats</p>
+                                    <p class="hero-excerpt">Photo: Ulet Ifansasti/Greenpeace</p>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="article-header-row row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    <div class="article-header">
+                                        <div class="authors">
+                                            <div class="author-container">
+                                                <span class="date">05.12.2018</span>
+                                                <div class="author-wrapper first inline ">
+
+                                                    <p class="author-name">
+                                                        <!-- Use nickname to distinguish regular author and guest author -->
+                                                        <a class="author-name pink" href="/author/test/">					Test											</a>
+                                                    </p>
+                                                    <a href="https://twitter.com/test" class="button-twitter pink ">@test</a> </div>
+                                                <div class="author-twitter-wrapper">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="social-share track">
+                                            <div class="d-md-none share-copy">
+                                                <p class="pink">Share this story</p>
+                                            </div>
+                                            <div class="inner">
+                                                <a href="#" class="button-round pink facebook"></a> <a href="#" class="button-round pink twitter"></a> </div>
+                                            <div class="bottom-border"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
+                        <div class="container main-content">
+
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6 primary-content">
+
+                                    <p><span style="font-weight: 400;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis. Sit amet purus gravida quis blandit.</span></p>
+
+<style>
+{% include styles.css %}
+</style>
+{% include structured_content.html %}
+<script>
+{% include scripts.js %}
+</script>
+
+                                    <p><span style="font-weight: 400;">Ultrices in iaculis nunc sed augue. In fermentum et sollicitudin ac orci phasellus egestas. Sem integer vitae justo eget magna fermentum. Aenean sed adipiscing diam donec. A diam maecenas sed enim. Mauris ultrices eros in cursus turpis massa tincidunt dui. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque.</span></p>
+
+                                </div>
+                                <aside class="col-lg-3 col-md-4 side-module">
+
+
+
+                                    <div class="storylink storylink-list01 light-theme  " data-type="Overridden">
+                                        <h5>More on palm oil</h5>
+                                        <ul class="storylink-list">
+
+
+                                            <li><a href="/2018/05/08/palm-oil-eu-uk-defence-malaysia-bae-systems/">British diplomats warned palm oil row could harm Malaysian defence deals</a></li>
+
+
+
+                                            <li><a href="/2018/02/23/palm-oil-eu-biofuels-brexit-defence-malaysia-uk/">Government refuses to say if it will back EU move to ban palm oil in biofuels</a></li>
+
+
+
+                                            <li><a href="/2018/06/14/brexit-palm-oil-malaysia-lobbied-uk-government/">Malaysian officials lobbied UK ministers on EU palm oil move to ‘test post-Brexit approaches’</a></li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </aside>
+                            </div>
+
+
+
+
+                            <div class="row embed-row embed-row-medium">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    <div class="interactive-container">
+                                        <div id="DV-viewer-5225310-FOI-Request-0437-18-Digest-11-July-2018-1" class="DC-embed DC-embed-document DV-container"></div>
+                                        <script src="https://assets.documentcloud.org/viewer/loader.js"></script>
+                                        <div class="figcaption">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside class="col-lg-3 col-md-4 side-module">
+
+
+
+                                </aside>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6 primary-content">
+
+
+                                </div>
+                                <aside class="col-lg-3 col-md-4 side-module">
+
+
+
+                                </aside>
+                            </div>
+
+
+                        </div>
+                    </section>
+
+
+                    <div class="acf-layout post post-footer">
+
+
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-sm-12 col-md-8 col-lg-6">
+                                    <div class="content-footer-inner footer-storylink" data-type="Auto most recent">
+
+
+
+                                        <aside class="storylink storylink-list01 storylink-list01--image">
+                                            <h5>Latest stories</h5>
+                                            <div class="storylink-list loop-content ul">
+
+
+
+
+
+                                                <div class="storylink storylink-03 clearfix">
+                                                    <div class="image image-post-13293">
+                                                        <img data-src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-146x84.jpg" src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-146x84.jpg" size="(max-width: 763px) 1px,
+ (max-width: 763px) and (-webkit-min-device-pixel-ratio: 2) 1px,
+ (min-width: 764px) 146px,
+ (min-width: 764px) and (-webkit-min-device-pixel-ratio: 2) 292px,
+ (min-width: 1280px) 216px,
+ (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) 432px,
+ (min-width: 1280px) and (min-resolution: 192dpi) 432px" data-srcset="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-146x84.jpg 146w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-216x124.jpg 216w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-292x168.jpg 292w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Davis-and-Paterson-432x248.jpg 432w">
+                                                        <a class="link-overlay" href="/2018/12/21/brexit-oklahoma-david-davis-owen-paterson/"></a> </div>
+
+                                                    <div class="storylink-content">
+                                                        <a class="post-main" href="/2018/12/21/brexit-oklahoma-david-davis-owen-paterson/">      Leading Brexiteers’ trip to meet Trump trade officials funded by US business interests
+      </a>
+                                                        <div class="storylink-metas">
+                                                            <a href="https://unearthed.greenpeace.org/category/brexit/" class="category">Brexit</a> <span class="taxonomy">News</span>
+                                                            <span class="date">21.12.2018</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="storylink storylink-03 clearfix">
+                                                    <div class="image image-post-13258">
+                                                        <img data-src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-146x84.jpg" src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-146x84.jpg" size="(max-width: 763px) 1px,
+ (max-width: 763px) and (-webkit-min-device-pixel-ratio: 2) 1px,
+ (min-width: 764px) 146px,
+ (min-width: 764px) and (-webkit-min-device-pixel-ratio: 2) 292px,
+ (min-width: 1280px) 216px,
+ (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) 432px,
+ (min-width: 1280px) and (min-resolution: 192dpi) 432px" data-srcset="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-146x84.jpg 146w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-216x124.jpg 216w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-292x168.jpg 292w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/Truss-2-432x248.jpg 432w">
+                                                        <a class="link-overlay" href="/2018/12/19/liz-truss-dark-money-think-tanks-koch-brexit/"></a> </div>
+
+                                                    <div class="storylink-content">
+                                                        <a class="post-main" href="/2018/12/19/liz-truss-dark-money-think-tanks-koch-brexit/">      Liz Truss met with ‘dark money’ think tanks during taxpayer funded trip to Washington DC
+      </a>
+                                                        <div class="storylink-metas">
+                                                            <a href="https://unearthed.greenpeace.org/category/brexit/" class="category">Brexit</a> <span class="taxonomy">News</span>
+                                                            <span class="date">19.12.2018</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="storylink storylink-03 clearfix">
+                                                    <div class="image image-post-13100">
+                                                        <img data-src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-146x84.jpg" src="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-146x84.jpg" size="(max-width: 763px) 1px,
+ (max-width: 763px) and (-webkit-min-device-pixel-ratio: 2) 1px,
+ (min-width: 764px) 146px,
+ (min-width: 764px) and (-webkit-min-device-pixel-ratio: 2) 292px,
+ (min-width: 1280px) 216px,
+ (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) 432px,
+ (min-width: 1280px) and (min-resolution: 192dpi) 432px" data-srcset="https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-146x84.jpg 146w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-216x124.jpg 216w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-292x168.jpg 292w,
+   https://unearthed.greenpeace.org/wp-content/uploads/2018/12/RefugeForWildlife-7190-1-432x248.jpg 432w">
+                                                        <a class="link-overlay" href="/2018/12/19/costa-rica-tourism-howler-monkey/"></a> </div>
+
+                                                    <div class="storylink-content">
+                                                        <a class="post-main" href="/2018/12/19/costa-rica-tourism-howler-monkey/">      Cut-price power lines are killing howler monkeys in Costa Rica
+      </a>
+                                                        <div class="storylink-metas">
+                                                            <a href="https://unearthed.greenpeace.org/category/forests/" class="category">Forests</a> <span class="taxonomy">Feature</span>
+                                                            <span class="date">19.12.2018</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+            <!-- /content-wrapper -->
+        </div>
+    </main>
+
+    <section class="footer-message">
+        <div class="footer-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5>Award-winning journalism from Greenpeace UK</h5>
+                        <strong><a href="https://unearthed.greenpeace.org/contact-us" class="contact-us">Contact us</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-by">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="small">
+                            <strong>Design by <a href="http://www.designbyst.com" target="_blank">S-T</a></strong> / <strong>Build by <a href="https://madebyon.com" target="_blank">ON</strong></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div id="footer-banner" data-url="https://secure.edirectdebit.com/Greenpeace/unearthed/Desktop-Form-Page/?ref=9E511" data-target="">
+            <div class="footer-banner-inner">
+                <a title="" href="#" class="banner_link">You can help us keep unearthing the stories that matter</a>
+                <a href="#" class="button banner_button">Support us</a>
+                <a href="#" class="button-round grey caption hide"></a>
+            </div>
+        </div>
+
+        <a class="greenpeace-logo" title="Greenpeace" target="_blank" href="http://www.greenpeace.org.uk/"><img src="https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/greenpeace-white.svg" onerror="this.src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/assets/images/greenpeace-white.png'; this.onerror=null;"></a>
+    </footer>
+    <script type='text/javascript' src='https://unearthed.greenpeace.org/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+
+    <script type='text/javascript' src='https://unearthed.greenpeace.org/wp-content/themes/unearthed/dist/main.js'></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: 517047128646306,
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "licenseKey": "0e2356a3a2",
+            "applicationID": "70211697",
+            "transactionName": "blZSMUtTD0tZVRJfDVcccQZNWw5WF0UPWAVVVg==",
+            "queueTime": 0,
+            "applicationTime": 573,
+            "atts": "QhFRRwNJHEU=",
+            "errorBeacon": "bam.nr-data.net",
+            "agent": ""
+        }
+    </script>
+</body>
+
+</html>

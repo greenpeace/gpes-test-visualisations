@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now()])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1099.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <title>{{ site.title }} - Greenpeace International</title>
+    <meta name="description" content="Greenpeace International">
+
+
+    <meta property="og:title" content="Feminism&#x20;and&#x20;environmentalism&#x20;go&#x20;hand&#x20;in&#x20;hand&#x20;-&#x20;it&#x27;s&#x20;gender&#x20;day&#x20;at&#x20;the&#x20;global&#x20;climate&#x20;talks&#x20;-&#x20;Greenpeace&#x20;International" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks" />
+    <meta property="og:description" content="No&#x20;energy&#x20;transition&#x20;can&#x20;be&#x20;fair&#x20;if&#x20;it&#x20;does&#x20;not&#x20;include&#x20;over&#x20;half&#x20;the&#x20;world&#x2019;s&#x20;population.&#x20;A&#x20;fair&#x20;inclusive&#x20;society&#x20;is&#x20;crucial&#x20;to&#x20;avert&#x20;climate&#x20;catastrophe.&#x20;&#x20;" />
+    <meta property="og:image" content="https://storage.googleapis.com/planet4-international-stateless/2018/12/e9df3dcc-gp0stsszx_medium_res.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:site_name" content="Greenpeace International" />
+
+    <meta property="fb:pages" content="7297163299" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Greenpeace International" />
+    <meta name="twitter:title" content="Feminism&#x20;and&#x20;environmentalism&#x20;go&#x20;hand&#x20;in&#x20;hand&#x20;-&#x20;it&#x27;s&#x20;gender&#x20;day&#x20;at&#x20;the&#x20;global&#x20;climate&#x20;talks&#x20;-&#x20;Greenpeace&#x20;International">
+    <meta name="twitter:description" content="No&#x20;energy&#x20;transition&#x20;can&#x20;be&#x20;fair&#x20;if&#x20;it&#x20;does&#x20;not&#x20;include&#x20;over&#x20;half&#x20;the&#x20;world&#x2019;s&#x20;population.&#x20;A&#x20;fair&#x20;inclusive&#x20;society&#x20;is&#x20;crucial&#x20;to&#x20;avert&#x20;climate&#x20;catastrophe.&#x20;&#x20;">
+
+    <meta name="twitter:creator" content="Ana Arias, Mónica Parrilla and Tatiana Nuño">
+
+    <meta name="twitter:image" content="https://storage.googleapis.com/planet4-international-stateless/2018/12/e9df3dcc-gp0stsszx_medium_res.jpg" />
+
+    <script>
+        var cookie_consent = document.cookie.split(';').filter(function(c) {
+            return c.indexOf('greenpeace=2') >= 0
+        }).length;
+        var google_tag_value = 'GTM-N7SG829';
+        var enforce_cookies_policy = '1';
+
+        if (enforce_cookies_policy && 1 !== parseInt(cookie_consent)) {
+            google_tag_value = '';
+        }
+
+        if (google_tag_value) {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'pageType': 'Post page',
+                'signedIn': 'false',
+                'visitorType': '',
+                'userID': '',
+                'post_tags': 'Climate'
+            });
+        }
+    </script>
+    <script>
+        if (google_tag_value) {
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', google_tag_value);
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="pingback" href="https://www.greenpeace.org/international/xmlrpc.php">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/ico" href="https://www.greenpeace.org/international/wp-content/themes/planet4-master-theme/favicon.ico" />
+    <link rel="dns-prefetch" href="//act.greenpeace.org">
+    <link rel='dns-prefetch' href='//www.greenpeace.org' />
+    <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Greenpeace International &raquo; Feminism and environmentalism go hand in hand &#8211; it&#8217;s gender day at the global climate talks Comments Feed" href="https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/feed/" />
+    <link rel='stylesheet' id='bootstrap-css' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css?ver=4.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css?ver=1.9.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='fork-awesome-css' href='https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.1/css/fork-awesome.min.css?ver=1.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='parent-style-css' href='https://www.greenpeace.org/international/wp-content/themes/planet4-master-theme/style.css?ver=1544602055' type='text/css' media='all' />
+    <link rel='stylesheet' id='plugin-blocks-css' href='https://www.greenpeace.org/international/wp-content/plugins/planet4-plugin-blocks/style.css?ver=1544602053' type='text/css' media='all' />
+    <link rel='stylesheet' id='child-style-css' href='https://www.greenpeace.org/international/wp-content/themes/planet4-child-theme/style.min.css?ver=1544602054' type='text/css' media='all' />
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <link rel='https://api.w.org/' href='https://www.greenpeace.org/international/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.greenpeace.org/international/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.greenpeace.org/international/wp-includes/wlwmanifest.xml" />
+    <link rel='prev' title='Why the world’s smallest nations are making the loudest noise for the climate' href='https://www.greenpeace.org/international/story/19853/why-the-worlds-smallest-nations-are-making-the-loudest-noise-for-the-climate/' />
+    <link rel='next' title='Holding your Government Accountable for Climate Change: A People’s Guide' href='https://www.greenpeace.org/international/publication/19818/holding-your-government-accountable-for-climate-change-a-peoples-guide/' />
+    <link rel="canonical" href="https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/" />
+    <link rel='shortlink' href='https://www.greenpeace.org/international/?p=19954' />
+    <link rel="alternate" type="application/json+oembed" href="https://www.greenpeace.org/international/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenpeace.org%2Finternational%2Fstory%2F19954%2Ffeminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.greenpeace.org/international/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenpeace.org%2Finternational%2Fstory%2F19954%2Ffeminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks%2F&#038;format=xml" />
+    <link rel="icon" href="https://storage.googleapis.com/planet4-international-stateless/2018/01/e3f6f791-favicon-150x150.png" sizes="32x32" />
+    <link rel="icon" href="https://storage.googleapis.com/planet4-international-stateless/2018/01/e3f6f791-favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://storage.googleapis.com/planet4-international-stateless/2018/01/e3f6f791-favicon.png" />
+    <meta name="msapplication-TileImage" content="https://storage.googleapis.com/planet4-international-stateless/2018/01/e3f6f791-favicon.png" />
+
+</head>
+
+
+<body class="post-template-default single single-post postid-19954 single-format-standard white-bg">
+
+    <ul class="skip-links">
+        <li><a href="#header">Skip to Navigation</a></li>
+        <li><a href="#content">Skip to Content</a></li>
+        <li><a href="#footer">Skip to Footer</a></li>
+    </ul>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7SG829"
+						  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav id="header" class="top-navigation navbar">
+        <a class="site-logo" href="https://www.greenpeace.org/international/">
+			<img src="https://www.greenpeace.org/international/wp-content/themes/planet4-master-theme/images/gp-logo.svg" alt="Greenpeace">
+		</a>
+        <button class="btn btn-navbar-toggle navbar-dropdown-toggle" data-toggle="open" data-target="#navbar-dropdown" aria-expanded="false" aria-label="Toggle navigation menu">
+			<span>Menu</span>
+		</button>
+        <ul id="navbar-dropdown" class="navbar-dropdown list-unstyled">
+            <li class="nav-item">
+                <button class="close-navbar-dropdown">
+					<span class="screen-reader-text">Close Menu</span>
+				</button>
+                <button class="country-dropdown-toggle" data-toggle="open" data-target="#country-list" aria-expanded="false" aria-label="Toggle worldwide site selection menu">
+					<span class="screen-reader-text">Selected:</span> International (English)
+					<span class="screen-reader-text">Change Country</span>
+				</button>
+                <div id="country-list" class="country-list">
+                    <a href="http://www.greenpeace.org/international">International | English</a>
+
+                    <ul>
+                        <li>
+                            <h3 class="country-group-letter">A</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/africa/en/">Africa | English</a></li>
+                                <li><a href="https://www.greenpeace.org/africa/fr/">Africa | Français</a></li>
+                                <li><a href="https://www.greenpeacearabic.org">Arabic | العربية</a></li>
+                                <li><a href="https://www.greenpeace.org/argentina/">Argentina | Español</a></li>
+                                <li><a href="https://www.greenpeace.org/australia/">Australia | English</a></li>
+                                <li><a href="https://www.greenpeace.org/austria/">Austria | Deutsch</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">B</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/belgium/fr/">Belgium | Français</a></li>
+                                <li><a href="https://www.greenpeace.org/belgium/nl/">Belgium | Nederlands</a></li>
+                                <li><a href="https://www.greenpeace.org/brasil/">Brazil | Português</a></li>
+                                <li><a href="https://www.greenpeace.org/bulgaria/">Bulgaria | български</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">C</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.org/canada/en/">Canada | English</a></li>
+                                <li><a href="http://www.greenpeace.org/canada/fr/">Canada | Français</a></li>
+                                <li><a href="http://www.greenpeace.org/chile/">Chile | Español</a></li>
+                                <li><a href="http://www.greenpeace.org.cn">China Mainland | 简体中文</a></li>
+                                <li><a href="http://www.greenpeace.org/colombia/">Colombia | Español</a></li>
+                                <li><a href="http://www.greenpeace.org/croatia">Croatia | Hrvatski</a></li>
+                                <li><a href="http://www.greenpeace.cz">Czech Republic | Česky</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">D</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.org/denmark/da/">Denmark | Dansk</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">E</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/eastasia/">East Asia | English</a></li>
+                                <li><a href="https://www.greenpeace.org/eu-unit">European Union | English</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">F</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/finland">Finland | Suomea</a></li>
+                                <li><a href="https://www.greenpeace.org/france">France | Français</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">G</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.de">Germany | Deutsch</a></li>
+                                <li><a href="https://www.greenpeace.org/greece">Greece | Ελληνικά</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">H</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/hk/">Hong Kong | 繁體中文</a></li>
+                                <li><a href="http://www.greenpeace.org/hungary/">Hungary | Magyar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">I</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/india/en/">India | English</a></li>
+                                <li><a href="https://www.greenpeace.org/india/hi/">India | Hindi</a></li>
+                                <li><a href="https://www.greenpeace.org/seasia/id/">Indonesia | Indonesia</a></li>
+                                <li><a href="https://www.greenpeace.org/israel/">Israel | עברית</a></li>
+                                <li><a href="https://www.greenpeace.org/italy/">Italy | Italiano</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">J</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/japan/">Japan | 日本語</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">K</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/korea/">Korea | 한국어</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">L</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.org/luxembourg/de/">Luxembourg | Deutsch</a></li>
+                                <li><a href="http://www.greenpeace.org/luxembourg/fr/">Luxembourg | Français</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">M</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/seasia/about-us/Malaysia/">Malaysia | English</a></li>
+                                <li><a href="https://www.greenpeace.org/mexico/">Mexico | Español</a></li>
+                                <li><a href="https://www.greenpeace.org/mena/">Middle East and North Africa | English</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">N</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.nl">Netherlands | Nederlands</a></li>
+                                <li><a href="https://www.greenpeace.org/new-zealand">New Zealand | English</a></li>
+                                <li><a href="http://www.greenpeace.org/norway/no/">Norway | Norsk</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">P</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/seasia/ph/">Philippines | English</a></li>
+                                <li><a href="https://www.greenpeace.pl">Poland | Polska</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">R</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.org/romania/ro/">Romania | Română</a></li>
+                                <li><a href="https://www.greenpeace.org/russia/ru/">Russia | Русский</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">S</h3>
+                            <ul>
+                                <li><a href="http://www.greenpeace.org/slovakia/sk/">Slovakia | Slovensko</a></li>
+                                <li><a href="https://www.greenpeace.org/slovenia/">Slovenia | Slovenjia</a></li>
+                                <li><a href="https://www.greenpeace.org/seasia/">Southeast Asia | English</a></li>
+                                <li><a href="https://es.greenpeace.org/es/">Spain | Español</a></li>
+                                <li><a href="https://es.greenpeace.org/ca/">Spain | Català</a></li>
+                                <li><a href="https://es.greenpeace.org/eu/">Spain | Euskara</a></li>
+                                <li><a href="https://es.greenpeace.org/gl/">Spain | Galego</a></li>
+                                <li><a href="http://www.greenpeace.org/sweden/se/">Sweden | Svenska</a></li>
+                                <li><a href="https://www.greenpeace.ch/">Switzerland | Deutsch</a></li>
+                                <li><a href="https://www.greenpeace.ch/fr/">Switzerland | Français</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">T</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org/taiwan/">Taiwan | 正體中文</a></li>
+                                <li><a href="https://www.greenpeace.org/seasia/th/">Thailand | ไทย</a></li>
+                                <li><a href="https://www.greenpeace.org/turkey/">Turkey | Türk</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="country-group-letter">U</h3>
+                            <ul>
+                                <li><a href="https://www.greenpeace.org.uk">United Kingdom | English</a></li>
+                                <li><a href="https://www.greenpeace.org/usa/">USA | English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item act-nav-link menu-item menu-item-type-post_type menu-item-object-page menu-item-9131 ">
+                <a class="nav-link" href="https://www.greenpeace.org/international/act/">Act</a>
+            </li>
+            <li class="nav-item explore-nav-link menu-item menu-item-type-post_type menu-item-object-page menu-item-77 ">
+                <a class="nav-link" href="https://www.greenpeace.org/international/explore/">Explore</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-donate" href="http://www.greenpeace.org/international/supportus/">Donate</a>
+            </li>
+        </ul>
+        <button class="navbar-search-toggle" data-toggle="open" data-target="#search_form" aria-expanded="false" aria-label="Toggle search box">
+			<span class="screen-reader-text">Toggle search form</span>
+		</button>
+        <form id="search_form" action="https://www.greenpeace.org/international/" class="form nav-item nav-search-wrap">
+            <input type="text" class="form-control" placeholder="Search" value="" name="s" aria-label="Search">
+            <input id="orderby" type="hidden" name="orderby" value="relevant" />
+            <button class="top-nav-search-btn" type="submit">
+				<i class="fa fa-search"></i>
+				<span class="screen-reader-text">Search</span>
+			</button>
+        </form>
+    </nav>
+
+
+    <div class="clearfix"></div>
+    <div class="skewed-overlay"></div>
+
+    <article id="post-19954">
+
+        <header class="page-header">
+            <div class="page-header-background">
+            </div>
+            <div class="container">
+                <div class="top-page-tags">
+                    <a class="tag-item tag-item--main page-type" href="https://www.greenpeace.org/international/page_type/story/">Story</a>
+
+                    <div class="tag-wrap issues">
+                        <a class="tag-item tag-item--main" href="https://www.greenpeace.org/international/explore/energy/">Energy</a>
+                    </div>
+
+                    <div class="tag-wrap tags">
+                        <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/climate/">#Climate</a>
+                    </div>
+                </div>
+                <h1 class="page-header-title">{{ site.title }}</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single-post-meta">
+                            <address class="single-post-author">
+								by
+																	Test
+															</address>
+                            <time class="single-post-time" pubdate>11 December 2018</time>
+                            <span class="separator">|</span>
+                            <span id="comments-link" class="comment-link">
+									<img src="https://www.greenpeace.org/international/wp-content/themes/planet4-master-theme/images/speech_bubble.svg">
+									<a class="quantity"> 1 <span class="display-text">Comments</span> </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="share-buttons">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/" onclick="dataLayer.push({'event' : 'uaevent', 'eventCategory' : 'Social Share', 'eventAction': 'Facebook', 'eventLabel': 'https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/'});" target="_blank" class="share-btn facebook">
+		<i class="fa fa-facebook"></i>
+		<span class="sr-only">Share on Facebook</span>
+	</a>
+                            <!-- Twitter -->
+                            <a href="https://twitter.com/share?url=https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/&text=Feminism and environmentalism go hand in hand &#8211; it&#8217;s gender day at the global climate talks via @greenpeace&related=greenpeace" onclick="dataLayer.push({'event' : 'uaevent', 'eventCategory' : 'Social Share', 'eventAction': 'Twitter', 'eventLabel': 'https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/'});" target="_blank" class="share-btn twitter">
+		<i class="fa fa-twitter"></i>
+		<span class="sr-only">Share on Twitter</span>
+	</a>
+                            <!-- Email -->
+                            <a href="mailto:?subject=Feminism and environmentalism go hand in hand &amp;#8211; it&amp;#8217;s gender day at the global climate talks&body=https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/" onclick="dataLayer.push({'event' : 'uaevent', 'eventCategory' : 'Social Share', 'eventAction': 'Email', 'eventLabel': 'https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/'});" target="_blank" class="share-btn email">
+		<i class="fa fa-envelope"></i>
+		<span class="sr-only">Share via Email</span>
+	</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Post Block Start -->
+        <div class="container">
+            <div class="post-content">
+                <div class="post-content-lead">
+                    <article class="post-details">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+<style>
+{% include styles.css %}
+</style>
+{% include structured_content.html %} 
+<script>
+{% include scripts.js %}
+</script>
+
+
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- Post Page Block End -->
+
+
+        <section class="article-listing page-section">
+            <section class="article-listing page-section">
+                <input type="hidden" id="_wpnonce" name="_wpnonce" value="6f0ad20f8f" /><input type="hidden" name="_wp_http_referer" value="/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/" />
+                <div class="container">
+                    <div class="row">
+                        <header class="col-md-12 article-listing-intro">
+                            <h3 class="page-section-header">Latest Articles</h3>
+                        </header>
+
+                        <div class="article-list-section clearfix col-md-12">
+                            <article class="article-list-item">
+                                <div class="article-list-item-image article-list-item-image-max-width">
+                                    <a href="https://www.greenpeace.org/international/story/19972/were-exploring-the-great-southern-reef-to-save-it-from-big-oil/">
+				<img class="d-flex topicwise-article-image" src="https://storage.googleapis.com/planet4-international-stateless/2018/12/f2ab60cf-copy_of_2018-12-04-1110_gp0ststcj_web_size-510x340.jpg" alt="A leafy seadragon in the Great Australian Bight">
+			</a>
+                                </div>
+
+                                <div class="article-list-item-body">
+                                    <div class="article-list-item-tags top-page-tags">
+                                        <a class="tag-item tag-item--main page-type page-type-story" href="https://www.greenpeace.org/international/page_type/story/">Story</a>
+
+                                        <div class="tag-wrap tags">
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/climate/">#Climate</a>
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/oceans/">#Oceans</a>
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/oil/">#Oil</a>
+                                        </div>
+                                    </div>
+
+                                    <header>
+                                        <h4 class="article-list-item-headline">
+                                            <a href="https://www.greenpeace.org/international/story/19972/were-exploring-the-great-southern-reef-to-save-it-from-big-oil/">We&#039;re exploring the Great Southern Reef to save it from Big Oil</a>
+                                        </h4>
+                                        <p class="article-list-item-meta">
+                                            <span class="article-list-item-author">by
+													Max MacBride
+											</span>
+                                            <time class="article-list-item-date" datetime="">12 December 2018</time>
+                                        </p>
+                                    </header>
+
+                                    <p class="article-list-item-content">
+                                        The Great Barrier Reef is famous around the world. But hardly anyone’s heard of Australia’s system of pristine cold-water reefs we’ve been exploring...The Great Southern Reef.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="article-list-item">
+                                <div class="article-list-item-image article-list-item-image-max-width">
+                                    <a href="https://www.greenpeace.org/international/story/19853/why-the-worlds-smallest-nations-are-making-the-loudest-noise-for-the-climate/">
+				<img class="d-flex topicwise-article-image" src="https://storage.googleapis.com/planet4-international-stateless/2018/12/ee411fbe-img_0497-copy-2-453x340.jpg" alt="Kelvin with Litia Baleilevuka © Andrew Kelly/Greenpeace">
+			</a>
+                                </div>
+
+                                <div class="article-list-item-body">
+                                    <div class="article-list-item-tags top-page-tags">
+                                        <a class="tag-item tag-item--main page-type page-type-story" href="https://www.greenpeace.org/international/page_type/story/">Story</a>
+
+                                        <div class="tag-wrap tags">
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/climate/">#Climate</a>
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/coal/">#Coal</a>
+                                        </div>
+                                    </div>
+
+                                    <header>
+                                        <h4 class="article-list-item-headline">
+                                            <a href="https://www.greenpeace.org/international/story/19853/why-the-worlds-smallest-nations-are-making-the-loudest-noise-for-the-climate/">Why the world’s smallest nations are making the loudest noise for the climate</a>
+                                        </h4>
+                                        <p class="article-list-item-meta">
+                                            <span class="article-list-item-author">by
+													Kelvin Anthony
+											</span>
+                                            <time class="article-list-item-date" datetime="">11 December 2018</time>
+                                        </p>
+                                    </header>
+
+                                    <p class="article-list-item-content">
+                                        We can only build a better, sustainable future by acting on climate change. What does that mean? Phase out fossil fuels. Now is the time.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="article-list-item">
+                                <div class="article-list-item-image article-list-item-image-max-width">
+                                    <a href="https://www.greenpeace.org/international/press-release/19867/greenpeace-climate-emergency-demands-action-and-cop24-must-deliver-ambition/">
+				<img class="d-flex topicwise-article-image" src="https://storage.googleapis.com/planet4-international-stateless/2018/12/706a28fd-gp0stst2k_web_size-510x340.jpg" alt="">
+			</a>
+                                </div>
+
+                                <div class="article-list-item-body">
+                                    <div class="article-list-item-tags top-page-tags">
+                                        <a class="tag-item tag-item--main page-type page-type-press_release" href="https://www.greenpeace.org/international/page_type/press-release/">Press Release</a>
+
+                                        <div class="tag-wrap tags">
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/climate/">#Climate</a>
+                                            <a class="tag-item tag" href="https://www.greenpeace.org/international/tag/coal/">#Coal</a>
+                                        </div>
+                                    </div>
+
+                                    <header>
+                                        <h4 class="article-list-item-headline">
+                                            <a href="https://www.greenpeace.org/international/press-release/19867/greenpeace-climate-emergency-demands-action-and-cop24-must-deliver-ambition/">Greenpeace: Climate emergency demands action, and COP24 must deliver ambition</a>
+                                        </h4>
+                                        <p class="article-list-item-meta">
+                                            <span class="article-list-item-author">by
+													<a href="https://www.greenpeace.org/international/author/greenpeace-international/">Greenpeace International</a>
+											</span>
+                                            <time class="article-list-item-date" datetime="">9 December 2018</time>
+                                        </p>
+                                    </header>
+
+                                    <p class="article-list-item-content">
+                                        "This is a climate emergency, and only through a shared commitment to action will we prevent a system collapse."
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="col-md-12 col-lg-5 col-xl-5 mt-3">
+                            <button class="btn btn-secondary btn-block load-more" data-content=".article-list-section" data-page="1" data-total_pages="23" data-article_count="3" data-orderby=date data-post_status=publish data-suppress_filters=0 data-category__in[0]=69 data-post__not_in[0]=19954 data-tag__in[0]=89 data-numberposts=100>Load More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+        <div class="container page-section" id="comments">
+            <h2 class="page-section-header">Comments</h2>
+            <div class="comments-block">
+                <div class="form-section">
+                    <div id="respond" class="comment-respond">
+                        <h3 id="reply-title" class="comment-reply-title">Leave Your Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/#respond" style="display:none;">Cancel reply</a></small></h3>
+                        <form action="https://www.greenpeace.org/international/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+                            <div class="form-group mb-0">
+                                <label for="comments-textarea">Comment *</label>
+                                <textarea class="form-control" id="comment" name="comment" rows="6" placeholder="Your Comment" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments-name-input">Name *</label>
+                                <input type="text" class="form-control" id="author" name="author" placeholder="Your Name" required />
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="comments-email-input">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
+                            </div>
+                            <p class="form-submit"><button type="submit" class="btn btn-small btn-secondary">Post Comment</button>
+                                <input type='hidden' name='comment_post_ID' value='19954' id='comment_post_ID' />
+                                <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                            </p>
+                            <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="281ee32761" /></p>
+                            <p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="40" /></p>
+                        </form>
+                    </div>
+                    <!-- #respond -->
+
+                </div>
+                <section class="comments-section" itemscope itemtype="http://schema.org/UserComments">
+                    <h3 class="comments-section-title">Discussion</h3>
+                    <article class="single-comment " id="comment-4560">
+                        <p itemprop="commentText" class="single-comment-text">
+                            <p>Great post. So much to do , to develop both womens rigth and sustainable climat change.</p>
+                        </p>
+                        <footer class="single-comment-meta">
+                            <span class="author-info" itemprop="author">fermi</span>
+                            <time datetime="" class="comment-date" itemprop="commentTime">11 December 2018</time>
+                            <a rel='nofollow' class='comment-reply-link btn btn-small btn-secondary comment-reply-btn' href='https://www.greenpeace.org/international/story/19954/feminism-and-environmentalism-go-hand-in-hand-its-gender-day-at-the-global-climate-talks/?replytocom=4560#respond' onclick='return addComment.moveForm( "comment-4560", "4560", "respond", "19954" )' aria-label='Reply to fermi'>Reply</a>
+                        </footer>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </article>
+
+
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <ul class="footer-social-media list-unstyled col-md-8 col-lg-5">
+                <li><a href="https://www.facebook.com/greenpeace.international">
+					<i class="fa fa-facebook-square "></i>
+					<span class="sr-only">Facebook</span>
+				</a></li>
+                <li><a href="https://www.twitter.com/greenpeace">
+					<i class="fa fa-twitter "></i>
+					<span class="sr-only">Twitter</span>
+				</a></li>
+                <li><a href="https://www.youtube.com/greenpeace">
+					<i class="fa fa-youtube "></i>
+					<span class="sr-only">Youtube</span>
+				</a></li>
+                <li><a href="https://www.instagram.com/greenpeace/">
+					<i class="fa fa-instagram "></i>
+					<span class="sr-only">Instagram</span>
+				</a></li>
+            </ul>
+
+            <ul class="list-unstyled footer-links">
+                <li><a href="https://www.greenpeace.org/international/explore/about/">About Us</a></li>
+                <li><a href="https://www.greenpeace.org/international/worldwide/">Contact Us</a></li>
+                <li><a href="https://www.greenpeace.org/international/press-centre/">Press Centre</a></li>
+                <li><a href="/international/LinkedIn">Jobs</a></li>
+                <li><a href="https://www.greenpeace.org/international/sitemap/">Sitemap</a></li>
+            </ul>
+
+            <ul class="list-unstyled footer-links-secondary">
+                <li><a href="https://www.greenpeace.org/international/privacy/">Privacy and Cookies</a></li>
+                <li><a href="https://www.greenpeace.org/international/copyright/">Copyright</a></li>
+                <li><a href="https://www.greenpeace.org/international/terms/">Terms</a></li>
+                <li><a href="https://www.greenpeace.org/international/community-policy/">Our community policy</a></li>
+                <li><a href="http://www.greenpeace.org/international/en/System-templates/Search-results/?adv=true">Search the archive</a></li>
+            </ul>
+
+            <p class="copyright-text col-md-8">
+                Unless <a href="http://www.greenpeace.org/international/copyright/">otherwise stated</a>, the copy of the website is licensed under a <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY International License</a>
+            </p>
+            <p class="gp-year"><i class="fa fa-creative-commons"></i> Greenpeace International 2018</p>
+        </div>
+    </footer>
+
+    <div class="cookie-block" id="set-cookie">
+        <div class="row m-0">
+            <div class="col-sm-9 col-md-10 text-xl-center">
+                <p>We use cookies to enhance your experience. By clicking “Got it!” you agree to our <a href="http://www.greenpeace.org/international/privacy/">Privacy &amp; Cookies Policy</a>. You can <a href="https://www.greenpeace.org/international/privacy/#change-your-cookies-preferences">change your cookies settings anytime</a>.</p>
+            </div>
+            <div class="col-sm-3 col-md-2">
+                <button class="btn btn-secondary p-0" id="hidecookie">GOT IT!</button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-content/themes/planet4-master-theme/main.js?ver=1544602055'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?ver=1.9.0'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js?ver=1.14.3'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js?ver=4.1.1'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js?ver=2.0.8'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var p4_vars = {
+            "ajaxurl": "https:\/\/www.greenpeace.org\/international\/wp-admin\/admin-ajax.php"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-content/plugins/planet4-plugin-blocks/main.js?ver=1544602053'></script>
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+    <script async="async" type='text/javascript' src='https://www.greenpeace.org/international/wp-content/plugins/akismet/_inc/form.js?ver=4.1'></script>
+    <script type='text/javascript' src='https://www.greenpeace.org/international/wp-includes/js/comment-reply.min.js?ver=4.9.8'></script>
+
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "licenseKey": "a2e9e806c0",
+            "applicationID": "75377247",
+            "transactionName": "ZQFWZ0FZXBFTVUZbV1xLdVBHUV0MHUVbXF9eAQ==",
+            "queueTime": 0,
+            "applicationTime": 630,
+            "atts": "SUZVEQlDTx8=",
+            "errorBeacon": "bam.nr-data.net",
+            "agent": ""
+        }
+    </script>
+</body>
+
+</html>
