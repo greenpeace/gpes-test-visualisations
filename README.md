@@ -65,13 +65,7 @@ If you need to test your visualisations in other sites or pages you can add more
 - Insert the code bellow in the template (in the place you want the interactive visualisation to show).
 
 ```html
-<style>
-{% include styles.css %}
-</style>
-{% include structured_content.html %}
-<script>
-{% include scripts.js %}
-</script>
+{% include all.html %}
 ```
 
 - Duplicate the file `gpes-blog.html` **in the root of this repo's folder**. Rename and modify the copy to work with your template.
