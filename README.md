@@ -20,7 +20,7 @@ I suggest a simple workflow with Jekyll, Git and Github.
 
 ### Install Jekyll
 
-Jekyll is a static site generator that uses [Liquid](https://shopify.github.io/liquid/) templating (similar to [Twig](https://twig.symfony.com/), used in many of our sites). 
+Jekyll is a static site generator that uses [Liquid](https://shopify.github.io/liquid/) template language (similar to [Twig](https://twig.symfony.com/), used in many of our sites). 
 
 In this repository I use Jekyll test my html, css, javascript and svg in many site templates. [Install Jekyll](https://jekyllrb.com/).
 
