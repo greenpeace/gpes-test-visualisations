@@ -26,7 +26,7 @@ In this repository I use Jekyll test my html, css, javascript and svg in many si
 
 ### Develop interactive pieces and test them in many sites
 
-To develop an html interactive, please modify the html, css and js files in the `_includes` folder. Jekyll will insert them in the test templates so you have an aproximate preview how it will look like in each template.
+To develop an html interactive, please modify the html, css and js files in the `_includes/media-1/` folder. Jekyll will insert them in the test templates so you have an aproximate preview how it will look like in each template.
 
 Use `jekyll build` to build the final files and `jekyll serve` to tun a test server in your computer with the IP+port: http://127.0.0.1:4000
 
@@ -36,6 +36,8 @@ jekyll serve
 ```
 
 Change the files and refresh your browser to see the changes.
+
+You can develop more than one media piece in the same repository. Just create folders named `media-2`, `media-3`... and modify the file `all.html` to link to more than one piece.
 
 ### Collaborating with your team
 
