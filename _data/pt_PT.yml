@@ -1,0 +1,15 @@
+language: "pt_PT"
+
+media-2:
+    title: "Comparar a evolução de dois valores ao longo do tempo"
+    dataset1: "receitas"
+    dataset2: "despesas"
+    yaxe: "Milhares de euros"
+    xaxe: "Meses"
+    months:
+        january: "Janeiro"
+        february: "Fevereiro"
+        march: "Março"
+        april: "Abril"
+        may: "Maio"
+        june: "Junho"
