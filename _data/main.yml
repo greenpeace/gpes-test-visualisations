@@ -1,4 +1,15 @@
 language: "es_ES"
 
-foo:
-    bar: "Baz"
+media-2:
+    title: "Comparar evolución de dos datos en el tiempo"
+    dataset1: "ingresos"
+    dataset2: "gastos"
+    yaxe: "Miles de euros"
+    xaxe: "Meses"
+    months:
+        january: "enero"
+        february: "febrero"
+        march: "marzo"
+        april: "abril"
+        may: "mayo"
+        june: "junio"

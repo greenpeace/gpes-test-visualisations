@@ -1,0 +1,99 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.1" defer></script>
+<div class="chart-container" style="position: relative; height:auto; width:100%">
+  <canvas id="bar_chart_2" width="350" height="250"></canvas>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var ctx = document.getElementById("bar_chart_2");
+    var bar_chart_2 = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+            "{{ site.data[page.lang_file].media-2.months.january }}",
+            "{{ site.data[page.lang_file].media-2.months.february }}",
+            "{{ site.data[page.lang_file].media-2.months.march }}",
+            "{{ site.data[page.lang_file].media-2.months.april }}",
+            "{{ site.data[page.lang_file].media-2.months.may }}",
+            "{{ site.data[page.lang_file].media-2.months.june }}"],
+        datasets: [{
+            label: '{{ site.data[page.lang_file].media-2.dataset1 }}',
+            data: [8, 9, 10, 9, 12, 13],
+            backgroundColor: [
+              'rgba(255, 225, 159, 0.85)',
+              'rgba(255, 225, 159, 0.85)',
+              'rgba(255, 225, 159, 0.85)',
+              'rgba(255, 225, 159, 0.85)',
+              'rgba(255, 225, 159, 0.85)',
+              'rgba(255, 225, 159, 0.85)'
+            ]
+          },
+          {
+            label: '{{ site.data[page.lang_file].media-2.dataset2 }}',
+            data: [6, 19, 11, 8, 14, 11],
+            backgroundColor: [
+              'rgba(195, 224, 166, 0.85)',
+              'rgba(195, 224, 166, 0.85)',
+              'rgba(195, 224, 166, 0.85)',
+              'rgba(195, 224, 166, 0.85)',
+              'rgba(195, 224, 166, 0.85)',
+              'rgba(195, 224, 166, 0.85)'
+            ]
+          }
+
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: '{{ site.data[page.lang_file].media-2.title }}',
+          fontSize: 16,
+          fontFamily: '"Work Sans",sans-serif',
+          fontColor: '#212529'
+        },
+        legend: {
+          display: true,
+          labels: {
+            fontName: '"Work Sans",sans-serif',
+            fontColor: '#212529',
+            fontSize: 13
+          }
+        },
+        layout: {
+          padding: {
+            bottom: 20
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontFamily: '"Work Sans",sans-serif',
+              fontColor: '#212529'
+            },
+            scaleLabel: {
+              display: true,
+              labelString: '{{ site.data[page.lang_file].media-2.yaxe }}',
+              fontFamily: '"Work Sans",sans-serif',
+              fontColor: '#212529'
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontFamily: '"Work Sans",sans-serif',
+              fontColor: '#212529'
+            },
+            scaleLabel: {
+              display: true,
+              labelString: '{{ site.data[page.lang_file].media-2.xaxe }}',
+              fontFamily: '"Work Sans",sans-serif',
+              fontColor: '#212529'
+            }
+          }]
+        }
+      }
+    });
+
+  });
+
+</script>
