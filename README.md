@@ -6,7 +6,7 @@
   - [Develop visualisations and interactive media for our sites](#develop-visualisations-and-interactive-media-for-our-sites)
     - [Install Jekyll](#install-jekyll)
     - [Develop interactive pieces and test them in many sites](#develop-interactive-pieces-and-test-them-in-many-sites)
-    - [Translations](#translations)
+    - [Manage translations](#manage-translations)
     - [Collaborating with your team](#collaborating-with-your-team)
     - [Do you need a Wordpress plugin to publish?](#do-you-need-a-wordpress-plugin-to-publish)
   - [Add your layouts to this repository](#add-your-layouts-to-this-repository)
@@ -40,11 +40,13 @@ Change the files and refresh your browser to see the changes.
 
 You can develop more than one media piece in the same repository. Just create folders named `media-2`, `media-3`... and modify the file `all.html` to link to more than one piece.
 
-### Translations
+### Manage translations
 
-You can use this repo to collaboratively manage translations. Once a map or chart has been developed, you can put all the texts to be translated in `_data/main.yml` and adapt your chart/map code to use this texts. Then for every new translation you duplicate `main.yml` and translate.
+You can use this repo to collaboratively manage translations. Once a map or chart has been developed, you can put all the texts to be translated in the file `_data/main.yml` and adapt your chart/map code to use this texts. 
 
-See the example chart for more information.
+Then, for every new translation you should duplicate the file `main.yml`, name it as in the other examples and translate.
+
+See the example chart, translated to Portuguese and English, for more information.
 
 ### Collaborating with your team
 
