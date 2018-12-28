@@ -1,4 +1,4 @@
-# Visualisation development and testing
+# Visualisation development, testing and translation
 
 **The purpose of this repository is to help developing, testing and translating responsive interactive media, infographics and graphics that work in many different sites.**
 
