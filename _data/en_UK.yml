@@ -1,0 +1,15 @@
+language: "en_UK"
+
+media-2:
+    title: "Compare time-based data"
+    dataset1: "income"
+    dataset2: "expenses"
+    yaxe: "Thousands of euros"
+    xaxe: "Months"
+    months:
+        january: "January"
+        february: "February"
+        march: "March"
+        april: "April"
+        may: "May"
+        june: "June"
