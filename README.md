@@ -1,11 +1,12 @@
 # Visualisation development and testing
 
-**The purpose of this repository is to help developing and testing responsive interactive media, infographics and graphics that work in many different sites.**
+**The purpose of this repository is to help developing, testing and translating responsive interactive media, infographics and graphics that work in many different sites.**
 
 - [Visualisation development and testing](#visualisation-development-and-testing)
   - [Develop visualisations and interactive media for our sites](#develop-visualisations-and-interactive-media-for-our-sites)
     - [Install Jekyll](#install-jekyll)
     - [Develop interactive pieces and test them in many sites](#develop-interactive-pieces-and-test-them-in-many-sites)
+    - [Translations](#translations)
     - [Collaborating with your team](#collaborating-with-your-team)
     - [Do you need a Wordpress plugin to publish?](#do-you-need-a-wordpress-plugin-to-publish)
   - [Add your layouts to this repository](#add-your-layouts-to-this-repository)
@@ -38,6 +39,12 @@ jekyll serve
 Change the files and refresh your browser to see the changes.
 
 You can develop more than one media piece in the same repository. Just create folders named `media-2`, `media-3`... and modify the file `all.html` to link to more than one piece.
+
+### Translations
+
+You can use this repo to collaboratively manage translations. Once a map or chart has been developed, you can put all the texts to be translated in `_data/main.yml` and adapt your chart/map code to use this texts. Then for every new translation you duplicate `main.yml` and translate.
+
+See the example chart for more information.
 
 ### Collaborating with your team
 
