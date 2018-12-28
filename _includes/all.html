@@ -1,6 +1,8 @@
 {% comment %}
 * THIS FILE (all.html) GATHERS ALL THE HTML, CSS, JAVASCRIPT AND SVG IN THE FILES INCLUDED BELLOW.
 {% endcomment %}
+
+<!-- BEGIN MEDIA 1 -->
 <style>
 {% include media-1/styles.css %}
 </style>
@@ -8,3 +10,8 @@
 <script>
 {% include media-1/scripts.js %}
 </script>
+<!-- END MEDIA 1 -->
+
+<hr />
+
+<p><strong>Please note that you can easily translate the chart bellow from {{ site.data[page.lang_file].language }} to the language of your site: duplicate the file <code>_data/{{ page.lang_file }}.yml</code>, translate your copy of that file and finally change the lang_file setting in the file <code>{{ page.path }}</code></strong></p>
