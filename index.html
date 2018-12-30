@@ -6,9 +6,13 @@ layout: default
 <head>
     <meta charset="utf-8" />
     <title>Visualisation development, testing and translation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" />
+
     <style>
+
         body {
-            font-family: sans-serif;
             padding: 1em;
         }
 
@@ -51,66 +55,70 @@ layout: default
 
     <p>Here you can develop, test and translate interactive visualisations in different (GP) layouts. Use it to test your work in the following example pages:</p>
 
-    <h3>Test group 1</h3>
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+
+            <h3>Test group 1</h3>
+            <p class="soft">Our pages</p>
+            <ol>
+                <li><a href="es/blog.html">Blog</a></li>
+                <li><a href="es/greenwire.html">Greenwire</a></li>
+                <li><a href="es/magazine.html">Magazine</a></li>
+                <li><a href="es/page.html">Page</a></li>
+                <li><a href="es/petition.html">Petition</a></li>
+                <li><a href="es/raw.html" class="raw">Raw</a></li>
+            </ol>
+            <p class="soft">Our pages, translations</p>
+            <ol>
+                <li><a href="es/ca-page.html">Catalan</a>, <a href="es/ca-raw.html" class="raw">raw</a></li>
+                <li><a href="es/eu-page.html">Basque</a>, <a href="es/eu-raw.html" class="raw">raw</a></li>
+                <li><a href="es/gl-page.html">Galician</a>, <a href="es/gl-raw.html" class="raw">raw</a></li>
+            </ol>
+
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+
+            <h3>Test group 2</h3>
+            <p class="soft">Other Greenpeace pages</p>
+            <ol>
+                <li>Arabic: <a href="ara/news.html">news</a>, <a href="ara/raw.html" class="raw">raw</a></li>
+                <li>Austria: <a href="at/news.html">news</a>, <a href="at/raw.html" class="raw">raw</a></li>
+                <li>China Mainland: <a href="cn/news.html">news</a>, <a href="cn/raw.html" class="raw">raw</a></li>
+                <li>France: <a href="fr/news.html">news</a>, <a href="fr/raw.html" class="raw">raw</a></li>
+                <li>Germany: <a href="de/press.html">press</a>, <a href="de/raw.html" class="raw">raw</a></li>
+                <li>International: <a href="p4/story.html"><strong>Planet 4 story</strong></a>, <a href="p4/raw.html" class="raw">raw</a></li>
+                <li>Portugal: <a href="pt/news.html"> <strong>Planet 3 news</strong></a>, <a href="pt/raw.html" class="raw">raw</a></li>
+                <li>Rusia: <a href="ru/content.html">blog</a>, <a href="ru/raw.html" class="raw">raw</a></li>
+                <li>Switzerland: <a href="ch/news.html">news</a>, <a href="ch/raw.html" class="raw">raw</a></li>
+                <li>UK: <a href="uk/news.html">news</a>, <a href="uk/unearthed.html">Unearthed</a>, <a href="uk/raw.html" class="raw">raw</a></li>
+            </ol>
+
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+
+            <h3>Test group 3</h3>
+            <p class="soft">Pages in other sites</p>
+            <ol>
+                <li><a href="wp/post-stargazer-gutenberg.html">Wordpress post (Stargazer + Gutenberg)</a></li>
+                <li><a href="peoplevsoil/voices.html">People Vs Oil, Voices petition</a></li>
+            </ol>
+
+        </div>
+    </div>
     
 
-
-    <p class="soft">Our pages</p>
-
-    <ol>
-        <li><a href="es/blog.html">Blog</a></li>
-        <li><a href="es/greenwire.html">Greenwire</a></li>
-        <li><a href="es/magazine.html">Magazine</a></li>
-        <li><a href="es/page.html">Page</a></li>
-        <li><a href="es/petition.html">Petition</a></li>
-        <li><a href="es/raw.html" class="raw">Raw</a></li>
-    </ol>
-
-    <p class="soft">Our pages, translations</p>
-
-    <ol>
-        <li><a href="es/ca-page.html">Catalan</a>, <a href="es/ca-raw.html" class="raw">raw</a></li>
-        <li><a href="es/eu-page.html">Basque</a>, <a href="es/eu-raw.html" class="raw">raw</a></li>
-        <li><a href="es/gl-page.html">Galician</a>, <a href="es/gl-raw.html" class="raw">raw</a></li>
-    </ol>
-
-    <h3>Test group 2</h3>
-
-    <p class="soft">Other Greenpeace pages</p>
-
-    <ol>
-        <li>Arabic: <a href="ara/news.html">news</a>, <a href="ara/raw.html" class="raw">raw</a></li>
-        <li>Austria: <a href="at/news.html">news</a>, <a href="at/raw.html" class="raw">raw</a></li>
-        <li>China Mainland: <a href="cn/news.html">news</a>, <a href="cn/raw.html" class="raw">raw</a></li>
-        <li>France: <a href="fr/news.html">news</a>, <a href="fr/raw.html" class="raw">raw</a></li>
-        <li>Germany: <a href="de/press.html">press</a>, <a href="de/raw.html" class="raw">raw</a></li>
-        <li>International: <a href="p4/story.html"><strong>Planet 4 story</strong></a>, <a href="p4/raw.html" class="raw">raw</a></li>
-        <li>Portugal: <a href="pt/news.html"> <strong>Planet 3 news</strong></a>, <a href="pt/raw.html" class="raw">raw</a></li>
-        <li>Rusia: <a href="ru/content.html">blog</a>, <a href="ru/raw.html" class="raw">raw</a></li>
-        <li>Switzerland: <a href="ch/news.html">news</a>, <a href="ch/raw.html" class="raw">raw</a></li>
-        <li>UK: <a href="uk/news.html">news</a>, <a href="uk/unearthed.html">Unearthed</a>, <a href="uk/raw.html" class="raw">raw</a></li>
-    </ol>
-
-    <h3>Test group 3</h3>
-
-    <p class="soft">Pages in other sites</p>
-
-    <ol>
-        <li><a href="wp/post-stargazer-gutenberg.html">Wordpress post (Stargazer + Gutenberg)</a></li>
-        <li><a href="peoplevsoil/voices.html">People Vs Oil, Voices petition</a></li>
-    </ol>
 
     <h3>Code and notes</h3>
 
     <ul>
         <li>
-            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank"><strong>_includes</strong> folder</a> - Source code for the html, css, javascript and svg.
+            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank">_includes folder</a> - <strong>Source code</strong> for the html, css, javascript and svg.
         </li>
         <li>
             <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank">Readme</a> - <strong>Notes</strong> for developers / implementers.
         </li>
         <li>
-            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues">Issues</a> - View current issues or report an issue.
+            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues">Issues</a> - View current <strong>issues</strong> or report an issue.
         </li>
         <li>
             To add the visualisation to your site copy and paste the source code of your <strong>raw</strong> page.
