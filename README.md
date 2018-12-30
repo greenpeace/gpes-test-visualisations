@@ -62,7 +62,7 @@ Github pages will work with both public and private repositories.
 
 You can use this repo to **collaboratively manage translations**. Once a map or chart has been developed, you can put all the texts to be translated in the file `_data/original.yml` and adapt your chart/map code to use this texts.
 
-Then, for every new translation you should duplicate the file `main.yml`, name it as in the other examples and translate.
+Then, for every new translation you should duplicate the file `original.yml`, name it as in the other examples and translate.
 
 See the example chart, translated to Portuguese and English, and the files inside the `_data` folder for more information.
 
