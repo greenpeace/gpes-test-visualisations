@@ -58,6 +58,8 @@ Voila! you have a testing server with an URL like: https://greenpeace.github.io/
 
 Github pages will work with both public and private repositories.
 
+Each Github repository has [a wiki](https://help.github.com/articles/about-github-wikis/), [project board](https://help.github.com/articles/about-project-boards/) and [issue tracking](https://help.github.com/articles/about-issues/).
+
 ### Manage translations
 
 You can use this repo to **collaboratively manage translations**. Once a map or chart has been developed, you can put all the texts to be translated in the file `_data/original.yml` and adapt your chart/map code to use this texts.
