@@ -1,4 +1,4 @@
-language: "es_ES"
+language: "es-ES"
 
 media-2:
     title: "Comparar evolución de dos datos en el tiempo"
