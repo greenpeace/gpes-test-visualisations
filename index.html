@@ -20,6 +20,11 @@ layout: default
             color: gray;
         }
 
+        .raw {
+            font-size: 75%;
+            vertical-align: text-top;
+        }
+
     </style>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="shortcut icon" href="https://storage.googleapis.com/peticiones-greenpeace-2018/ico/favicon.png" />
@@ -58,7 +63,7 @@ layout: default
         <li><a href="es/magazine.html">Magazine</a></li>
         <li><a href="es/page.html">Page</a></li>
         <li><a href="es/petition.html">Petition</a></li>
-        <li><a href="es/raw.html">Raw</a></li>
+        <li><a href="es/raw.html" class="raw">Raw</a></li>
     </ol>
 
     <h3>Test group 2</h3>
@@ -66,16 +71,16 @@ layout: default
     <p class="soft">Other Greenpeace pages</p>
 
     <ol>
-        <li>Arabic - <a href="ara/news.html">news</a>, <a href="ara/raw.html">raw</a></li>
-        <li>Austria - <a href="at/news.html">news</a>, <a href="at/raw.html">raw</a></li>
-        <li>China Mainland - <a href="cn/news.html">news</a>, <a href="cn/raw.html">raw</a></li>
-        <li>France - <a href="fr/news.html">news</a>, <a href="fr/raw.html">raw</a></li>
-        <li>Germany - <a href="de/press.html">press</a>, <a href="de/raw.html">raw</a></li>
-        <li>International - <a href="p4/story.html"><strong>Planet 4 story</strong></a>, <a href="p4/raw.html">raw</a></li>
-        <li>Portugal - <a href="pt/news.html"> <strong>Planet 3 news</strong></a>, <a href="pt/raw.html">raw</a></li>
-        <li>Rusia - <a href="ru/content.html">blog</a>, <a href="ru/raw.html">raw</a></li>
-        <li>Switzerland - <a href="ch/news.html">news</a>, <a href="ch/raw.html">raw</a></li>
-        <li>UK - <a href="uk/news.html">news</a>, <a href="uk/unearthed.html">Unearthed</a>, <a href="uk/raw.html">raw</a></li>
+        <li>Arabic: <a href="ara/news.html">news</a>, <a href="ara/raw.html" class="raw">raw</a></li>
+        <li>Austria: <a href="at/news.html">news</a>, <a href="at/raw.html" class="raw">raw</a></li>
+        <li>China Mainland: <a href="cn/news.html">news</a>, <a href="cn/raw.html" class="raw">raw</a></li>
+        <li>France: <a href="fr/news.html">news</a>, <a href="fr/raw.html" class="raw">raw</a></li>
+        <li>Germany: <a href="de/press.html">press</a>, <a href="de/raw.html" class="raw">raw</a></li>
+        <li>International: <a href="p4/story.html"><strong>Planet 4 story</strong></a>, <a href="p4/raw.html" class="raw">raw</a></li>
+        <li>Portugal: <a href="pt/news.html"> <strong>Planet 3 news</strong></a>, <a href="pt/raw.html" class="raw">raw</a></li>
+        <li>Rusia: <a href="ru/content.html">blog</a>, <a href="ru/raw.html" class="raw">raw</a></li>
+        <li>Switzerland: <a href="ch/news.html">news</a>, <a href="ch/raw.html" class="raw">raw</a></li>
+        <li>UK: <a href="uk/news.html">news</a>, <a href="uk/unearthed.html">Unearthed</a>, <a href="uk/raw.html" class="raw">raw</a></li>
     </ol>
 
     <h3>Test group 3</h3>
@@ -109,6 +114,12 @@ layout: default
     <p>
         This tool was created to work with the <strong><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank">guide to create visualisations for our sites</a></strong> <span class="soft">(English doc created by the Spanish office)</span>. Please read about the <a href="https://greenpeace.github.io/gpes-visualisations/#core-principles" target="_blank">6 core principles</a> and <a href="https://greenpeace.github.io/gpes-visualisations/sharing.html" target="_blank">sharing with others</a>.
     </p>
+
+    <script>
+        document.querySelectorAll(".raw").forEach(function(element){
+            element.setAttribute("title", "Page to easily get the vis. source code.");
+        });
+    </script>
 
 </body>
 </html>
