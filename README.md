@@ -68,23 +68,23 @@ See the example chart, translated to Portuguese and English, and the files insid
 
 ### Do you need a Wordpress plugin to publish?
 
-**No.** In the Spanish Office we upload the html code to the media library and insert it in our site using our own **[Wordpress plugin](https://github.com/greenpeace/gpes-import-wp-shortcodes)**. However there are many other ways to add raw html to Wordpress pages.
+**No.** Our visualisations don't require that you use Wordpress. And you don't need an account in a commercial service to create, duplicate, translate, use or modify them.
 
-Our visualisations do not require that you use Wordpress. And you don't need an account in a commercial service to create, translate and use them.
+In the Spanish Office we upload the html code to the media library and insert it in our site using our own **[Wordpress plugin](https://github.com/greenpeace/gpes-import-wp-shortcodes)**. However there are many other ways to add raw html to Wordpress pages.
 
 ## Add your layouts to this repository
 
 If you need to **test your visualisations in other sites** or pages you can add more layouts to this repository. Just:
 
 - Fork this repository and clone your copy to your computer.
-- Add your html template inside the `_layouts` folder, just like the other ones.
+- Add your html template inside the `_layouts` folder, just like the other ones. (I've obtained the html templates using the command `wget` with an example url from each site)
 - Insert the code bellow in the template (in the place you want the interactive visualisation to show).
 
 ```html
 {% include all.html %}
 ```
 
-- Duplicate the file `gpes-blog.html` **in the root of this repo's folder**. Rename and modify the copy to work with your template.
+- Duplicate the file `es/gpes-blog.html` following the other examples. Rename and modify the copy to work with your template.
 - Build (with Jekyll) and test your layout. Make sure all the css, js and images load without errors.
 - Add a link to your test page in `index.html`
 - Commit, push and [create a pull request](https://help.github.com/articles/creating-a-pull-request/) if you want others to test their work in your template.
