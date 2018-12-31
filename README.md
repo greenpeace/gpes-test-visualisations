@@ -30,7 +30,9 @@ In this repository I use Jekyll test my html, css, javascript and svg in many si
 
 ### Develop interactive pieces and test them in many sites
 
-To develop an html interactive, please modify the html, css and js files in the `_includes/media-1/` or `_includes/media-2/`folders. Jekyll will insert them in the test templates so you have an approximate preview how it will look like in each template.
+First **[download a zip file with this tool](https://github.com/greenpeace/gpes-test-visualisations/archive/master.zip)** and unzip it. Now rename your new `gpes-test-visualisations-master` folder to the name of your project.
+
+To develop an html interactive, please **modify the html, css and js files** in the `_includes/media-1/` or `_includes/media-2/`folders. Jekyll will insert them in the test templates so you have an approximate preview how it will look like in each template.
 
 Use `jekyll build` to build the final files and `jekyll serve` to tun a test server in your computer with the IP+port: http://127.0.0.1:4000
 
@@ -51,8 +53,8 @@ Because Github also uses Jekyll, it's very easy and convenient to publish your v
 
 1. [Create a Github repository](https://github.com/new)
 2. Enable Github pages in your repository settings.
-3. Configure `_config.yml`
-4. Push your changes to your repository
+3. Configure `_config.yml`. Your repository links will adjust to your project.
+4. Commit and push your work to your new repository
 
 Voila! you have a testing server with an URL like: https://greenpeace.github.io/your-repository-name/ that you can send to your team.
 
