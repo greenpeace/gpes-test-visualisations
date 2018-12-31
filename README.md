@@ -22,17 +22,19 @@ It includes two placeholder **examples**, that you should delete and replace wit
 
 I suggest a simple workflow with Jekyll, Git and Github.
 
-### Install Jekyll
+### Install Jekyll and Git. Signup to Github.
 
-Jekyll is a static site generator that uses [Liquid](https://shopify.github.io/liquid/) template language (similar to [Twig](https://twig.symfony.com/), used in many of our sites).
+**Jekyll** is a static site generator that uses [Liquid](https://shopify.github.io/liquid/) template language (similar to [Twig](https://twig.symfony.com/), used in many of our sites). In this repository I use Jekyll test my html, css, javascript and svg in many site templates. [Install Jekyll](https://jekyllrb.com/).
 
-In this repository I use Jekyll test my html, css, javascript and svg in many site templates. [Install Jekyll](https://jekyllrb.com/).
+**Git** is the most popular version control system to track changes in computer files and develop software. If you are a beginner with Git, should install [Github desktop](https://desktop.github.com/). It's free and easy to use with your Github account. In Github desktop add your project as a local repository.
+
+**Github** is a git hosting service that provides free web hosting for small sites, deployed with Git and Jekyll. You should create a free [Github account](https://github.com/join) to collaborate with others.
 
 ### Develop interactive pieces and test them in many sites
 
 First **[download a zip file with this tool](https://github.com/greenpeace/gpes-test-visualisations/archive/master.zip)** and unzip it. Now rename your new `gpes-test-visualisations-master` folder to the name of your project.
 
-It's recommended that you **start** your own local **git repository** to track changes in your project files. If you are a beginner in Git, you can try [Github desktop](https://desktop.github.com/). It's free and easy to use with your free [Github account](https://github.com/join). In Github desktop add your project as a local repository.
+It's recommended that you **start** your own local **git repository** to track changes in your project files. 
 
 **To develop an html interactive**, please modify the html, css and js files in the `_includes/media-1/` or `_includes/media-2/`folders. Jekyll will insert them in the test templates so you have an approximate preview how it will look like in each template.
 
@@ -73,6 +75,8 @@ Then, for every new translation you should duplicate the file `original.yml`, na
 The translators will be able to preview their translations directly in their NRO test pages!
 
 **See the example chart**, translated to Portuguese and English, and the files inside the `_data` folder for more information.
+
+You can also use Github issues to assign tasks and manage translation updates.
 
 ### Do you need a Wordpress plugin to publish?
 
