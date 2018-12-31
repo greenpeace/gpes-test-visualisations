@@ -93,8 +93,8 @@ If you need to **test your visualisations in other sites** or pages you can add 
 ```
 
 - Duplicate the file `es/gpes-blog.html` to a folder with your country TLD (just like the other examples). Rename and modify the copy to work with your template.
-- Build and test your layout (with Jekyll). Make sure all the css, js and images load without errors.
-- Add a link to your test page in `index.html`
-- Commit, push and [create a pull request](https://help.github.com/articles/creating-a-pull-request/) if you want others to test their work in your template.
+- Build and test your layout (with `jekyll serve`). Make sure all the css, js and images load without errors.
+- Add a link to your test page in `index.html` inside the **Test group 2** section.
+- Commit your changes, push them to your fork and [create a pull request](https://help.github.com/articles/creating-a-pull-request/) if you want others to test their work in your template.
 
 For more information, **look at the examples already in the repository**.
