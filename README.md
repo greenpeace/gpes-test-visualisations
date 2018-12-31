@@ -76,7 +76,7 @@ The translators will be able to preview their translations directly in their NRO
 
 **See the example chart**, translated to Portuguese and English, and the files inside the `_data` folder for more information.
 
-You can also use Github issues to assign tasks and manage translation updates.
+You can also use Github issues and labels to assign tasks and manage translation updates.
 
 ### Do you need a Wordpress plugin to publish?
 
