@@ -53,9 +53,9 @@ Because Github also uses Jekyll, it's very easy and convenient to publish your v
 
 **To use Github pages:**
 
-1. [Create a Github repository](https://github.com/new)
+1. [Create a Github repository](https://github.com/new) (or publish your local Github repository with Github desktop) 
 2. Enable Github pages in your repository settings (in Github).
-3. Configure `_config.yml`. Your repository links will adjust to your project.
+3. Configure your project in `_config.yml`. Your repository links will adjust to your project.
 4. Commit and push your work to your new repository
 
 Voila! you have a testing server with an URL like: https://greenpeace.github.io/your-repository-name/ that you can send to your team.
@@ -68,9 +68,11 @@ Each Github repository has [a wiki](https://help.github.com/articles/about-githu
 
 You can use this repo to **collaboratively manage translations**. Once a map or chart has been developed, you can put all the texts to be translated in the file `_data/original.yml` and adapt your chart/map code to use this texts.
 
-Then, for every new translation you should duplicate the file `original.yml`, name it as in the other examples and translate.
+Then, for every new translation you should duplicate the file `original.yml`, name it as in the other examples and ask translators to translate directly in Github. (After adding them as collaborators in your Github repository settings).
 
-See the example chart, translated to Portuguese and English, and the files inside the `_data` folder for more information.
+The translators will be able to preview their translations directly in their NRO test pages!
+
+**See the example chart**, translated to Portuguese and English, and the files inside the `_data` folder for more information.
 
 ### Do you need a Wordpress plugin to publish?
 
@@ -82,7 +84,7 @@ In the Spanish Office we upload the html code to the media library and insert it
 
 If you need to **test your visualisations in other sites** or pages you can add more layouts to this repository. Just:
 
-- Fork this repository and clone your copy to your computer.
+- [Fork this repository](https://help.github.com/articles/fork-a-repo/) and clone your copy to your computer.
 - Add your html template inside the `_layouts` folder, just like the other ones. (I've obtained the html templates using the command `wget` with an example url from each site)
 - Insert the code bellow in the template (in the place you want the interactive visualisation to show).
 
@@ -90,8 +92,8 @@ If you need to **test your visualisations in other sites** or pages you can add 
 {% include all.html %}
 ```
 
-- Duplicate the file `es/gpes-blog.html` following the other examples. Rename and modify the copy to work with your template.
-- Build (with Jekyll) and test your layout. Make sure all the css, js and images load without errors.
+- Duplicate the file `es/gpes-blog.html` to a folder with your country TLD (just like the other examples). Rename and modify the copy to work with your template.
+- Build and test your layout (with Jekyll). Make sure all the css, js and images load without errors.
 - Add a link to your test page in `index.html`
 - Commit, push and [create a pull request](https://help.github.com/articles/creating-a-pull-request/) if you want others to test their work in your template.
 
