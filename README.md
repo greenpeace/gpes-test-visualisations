@@ -32,9 +32,11 @@ In this repository I use Jekyll test my html, css, javascript and svg in many si
 
 First **[download a zip file with this tool](https://github.com/greenpeace/gpes-test-visualisations/archive/master.zip)** and unzip it. Now rename your new `gpes-test-visualisations-master` folder to the name of your project.
 
-To develop an html interactive, please **modify the html, css and js files** in the `_includes/media-1/` or `_includes/media-2/`folders. Jekyll will insert them in the test templates so you have an approximate preview how it will look like in each template.
+It's recommended that you **start** your own local **git repository** to track changes in your project files. If you are a beginner in Git, you can try [Github desktop](https://desktop.github.com/). It's free and easy to use with your free [Github account](https://github.com/join). In Github desktop add your project as a local repository.
 
-Use `jekyll build` to build the final files and `jekyll serve` to tun a test server in your computer with the IP+port: http://127.0.0.1:4000
+**To develop an html interactive**, please modify the html, css and js files in the `_includes/media-1/` or `_includes/media-2/`folders. Jekyll will insert them in the test templates so you have an approximate preview how it will look like in each template.
+
+Use `jekyll build` to build the final files and `jekyll serve` to tun a test server in your computer with the URL: http://127.0.0.1:4000
 
 ```bash
 jekyll build
@@ -52,7 +54,7 @@ Because Github also uses Jekyll, it's very easy and convenient to publish your v
 **To use Github pages:**
 
 1. [Create a Github repository](https://github.com/new)
-2. Enable Github pages in your repository settings.
+2. Enable Github pages in your repository settings (in Github).
 3. Configure `_config.yml`. Your repository links will adjust to your project.
 4. Commit and push your work to your new repository
 
