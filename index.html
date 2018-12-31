@@ -29,6 +29,14 @@ layout: default
             vertical-align: text-top;
         }
 
+        #menuDevelop, #menuTranslate {
+            background-color: antiquewhite;
+        }
+
+        .pure-menu-children {
+            background-color: #feffd1;
+        }
+
     </style>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="shortcut icon" href="https://storage.googleapis.com/peticiones-greenpeace-2018/ico/favicon.png" />
@@ -49,21 +57,34 @@ layout: default
 
 </head>
 <body>
+
     <div class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues" target="_blank" class="pure-menu-link" title="Report an issue or check exiting issues with your project">Issues</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_data" target="_blank" class="pure-menu-link" title="Translate your project here">Translations</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank" class="pure-menu-link" title="Your project's code to create the visualizations">Vis code</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/wiki" target="_blank" class="pure-menu-link" title="Your project documentation">Wiki</a></li>
-        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" class="pure-menu-link" title="Your project's README">Notes 4 dev</a></li>
-        <li class="pure-menu-item"><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank" class="pure-menu-link" title="Guide to create visualisations for our sites">Vis Guide</a></li>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" id="menuDevelop" class="pure-menu-link">Develop</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank" class="pure-menu-link" title="Your project's code to create the visualizations">Visualisation source code</a></li>
+                    <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues" target="_blank" class="pure-menu-link" title="Report an issue or check exiting issues with your project">Issue management</a></li>
+                    <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/wiki" target="_blank" class="pure-menu-link" title="Your project documentation">Documentation wiki</a></li>
+                    <li class="pure-menu-item"><span class="pure-menu-link">----------</span></li>
+                    <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" class="pure-menu-link" title="Your project's README"><strong>How to develop from here</strong></a></li>
+                    <li class="pure-menu-item"><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank" class="pure-menu-link" title="Guide to create visualisations for our sites">Visualisations Guide</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" id="menuTranslate" class="pure-menu-link">Translate</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_data" target="_blank" class="pure-menu-link" title="Translate your project here">Languages folder</a></li>
+                </ul>
+            </li>
         </ul>
-</div>
+    </div>
+
     <h1>{{ site.long_title }}</h1>
     
     <p>Making visualisations or interactive content that works in many other sites can be difficult. I hope this tool will help to make it a little easier.</p>
 
-    <p>Here you can develop, test and translate interactive visualisations in different (GP) layouts. Use it to test your work in the following example pages:</p>
+    <p>Here you can develop, test and translate interactive visualisations in different Greenpeace layouts. Use it to test your work in the following example pages:</p>
 
     <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-3">
@@ -116,27 +137,13 @@ layout: default
         </div>
     </div>
     
+    <p><a class="pure-button" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" class="pure-menu-link" title="Your project's README"><strong>How to use &rarr;</strong></a></p>
 
 
-    <h3>Code and notes</h3>
-
-    <ul>
-        <li>
-            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank">_includes folder</a> - <strong>Source code</strong> for the html, css, javascript and svg.
-        </li>
-        <li>
-            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank">Readme</a> - <strong>Notes</strong> for developers / implementers.
-        </li>
-        <li>
-            <a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues">Issues</a> - View current <strong>issues</strong> or report an issue.
-        </li>
-        <li>
-            To add the visualisation to your site copy and paste the source code of your <strong>raw</strong> page.
-        </li>
-    </ul>
-
-    <h3>Important:</h3>
+    <h3>Important notes:</h3>
     
+    <p>To add this visualisation to your site copy and paste the source code of your <strong>raw</strong> page. After the translation, of course!</p>
+
     <p>
         This tool was created to work with the <strong><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank">guide to create visualisations for our sites</a></strong> <span class="soft">(English doc created by the Spanish office)</span>. Please read about the <a href="https://greenpeace.github.io/gpes-visualisations/#core-principles" target="_blank">6 core principles</a> and <a href="https://greenpeace.github.io/gpes-visualisations/sharing.html" target="_blank">sharing with others</a>.
     </p>
@@ -146,6 +153,8 @@ layout: default
             element.setAttribute("title", "Page to easily get the vis. source code.");
         });
     </script>
+
+    <script src="assets/js/menus.js"></script>
 
 </body>
 </html>
