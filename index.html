@@ -91,19 +91,19 @@ layout: default
                 <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                     <a href="#" id="menuDevelop" class="pure-menu-link">Develop</a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank" class="pure-menu-link" title="Your project's code to create the visualizations">Visualisation source code</a></li>
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues" target="_blank" class="pure-menu-link" title="Report an issue or check exiting issues with your project">Issue management</a></li>
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/wiki" target="_blank" class="pure-menu-link" title="Your project documentation">Documentation wiki</a></li>
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/projects" target="_blank" class="pure-menu-link" title="Plan your project">Project boards</a></li>
+                        <li class="pure-menu-item"><a data-click="_includes" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank" class="pure-menu-link" title="Your project's code to create the visualizations">Visualisation source code</a></li>
+                        <li class="pure-menu-item"><a data-click="issues" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues" target="_blank" class="pure-menu-link" title="Report an issue or check exiting issues with your project">Issue management</a></li>
+                        <li class="pure-menu-item"><a data-click="wiki" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/wiki" target="_blank" class="pure-menu-link" title="Your project documentation">Documentation wiki</a></li>
+                        <li class="pure-menu-item"><a data-click="projects" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/projects" target="_blank" class="pure-menu-link" title="Plan your project">Project boards</a></li>
                         <li class="pure-menu-item pure-menu-disabled">------------------------------</li>
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" class="pure-menu-link" title="Your project's README"><strong>How to develop from here</strong></a></li>
-                        <li class="pure-menu-item"><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank" class="pure-menu-link" title="Guide to create visualisations for our sites">Visualisations Guide</a></li>
+                        <li class="pure-menu-item"><a data-click="readme" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" class="pure-menu-link" title="Your project's README"><strong>How to develop from here</strong></a></li>
+                        <li class="pure-menu-item"><a data-click="vis-guide" href="https://greenpeace.github.io/gpes-visualisations/" target="_blank" class="pure-menu-link" title="Guide to create visualisations for our sites">Visualisations Guide</a></li>
                     </ul>
                 </li>
                 <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                     <a href="#" id="menuTranslate" class="pure-menu-link">Translate</a>
                     <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_data" target="_blank" class="pure-menu-link" title="Translate your project here">Languages folder</a></li>
+                        <li class="pure-menu-item"><a data-click="_data" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_data" target="_blank" class="pure-menu-link" title="Translate your project here">Languages folder</a></li>
                     </ul>
                 </li>
             </ul>
@@ -169,7 +169,7 @@ layout: default
         </div>
     </div>
     
-    <div class="howToUse"><a class="pure-button" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" class="pure-menu-link" title="Your project's README"><strong>How to use &rarr;</strong></a></div>
+    <div class="howToUse"><a data-click="readme" class="pure-button" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" target="_blank" title="Your project's README"><strong>How to use &rarr;</strong></a></div>
 
     <div class="importantNotes">
         <h3>Important notes:</h3>
@@ -177,13 +177,21 @@ layout: default
         <p>To add this visualisation to your site copy and paste the source code of your <strong>raw</strong> page. After the translation, of course!</p>
 
         <p>
-            This tool was created to work with the <strong><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank">guide to create visualisations for our sites</a></strong> <span class="soft">(English doc created by the Spanish office)</span>. Please read about the <a href="https://greenpeace.github.io/gpes-visualisations/#core-principles" target="_blank">6 core principles</a> and <a href="https://greenpeace.github.io/gpes-visualisations/sharing.html" target="_blank">sharing with others</a>.
+            This tool was created to work with the <strong><a data-click="vis-guide" href="https://greenpeace.github.io/gpes-visualisations/" target="_blank">guide to create visualisations for our sites</a></strong> <span class="soft">(English doc created by the Spanish office)</span>. Please read about the <a data-click="vis-guide-6-principles" href="https://greenpeace.github.io/gpes-visualisations/#core-principles" target="_blank">6 core principles</a> and <a data-click="vis-guide-sharing" href="https://greenpeace.github.io/gpes-visualisations/sharing.html" target="_blank">sharing with others</a>.
         </p>
     </div>
 
     <script>
         document.querySelectorAll(".raw").forEach(function(element){
             element.setAttribute("title", "Page to easily get the vis. source code.");
+        });
+        document.querySelectorAll("a[data-click]").forEach(function(element){
+            element.addEventListener("click", function(element){
+                var dataClick = this.dataset.click;
+                if (typeof(gtag) == "function") {
+                    gtag("event", "click", { "event_category": "navigation", "event_label": dataClick });
+                }
+            });
         });
     </script>
 
