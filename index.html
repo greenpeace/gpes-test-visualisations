@@ -17,7 +17,7 @@ layout: default
         }
 
         h1 {
-            margin-top: 0;
+            margin-top: 0.5em;
         }
 
         .soft {
@@ -49,7 +49,17 @@ layout: default
 
 </head>
 <body>
-    <h1>Visualisation development, testing and translation</h1>
+    <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/issues" target="_blank" class="pure-menu-link" title="Report an issue or check exiting issues with your project">Issues</a></li>
+        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_data" target="_blank" class="pure-menu-link" title="Translate your project here">Translations</a></li>
+        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/tree/master/_includes" target="_blank" class="pure-menu-link" title="Your project's code to create the visualizations">Vis code</a></li>
+        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/wiki" target="_blank" class="pure-menu-link" title="Your project documentation">Wiki</a></li>
+        <li class="pure-menu-item"><a href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/blob/master/README.md" class="pure-menu-link" title="Your project's README">Notes 4 dev</a></li>
+        <li class="pure-menu-item"><a href="https://greenpeace.github.io/gpes-visualisations/" target="_blank" class="pure-menu-link" title="Guide to create visualisations for our sites">Vis Guide</a></li>
+        </ul>
+</div>
+    <h1>{{ site.long_title }}</h1>
     
     <p>Making visualisations or interactive content that works in many other sites can be difficult. I hope this tool will help to make it a little easier.</p>
 
