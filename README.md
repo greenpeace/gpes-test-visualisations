@@ -4,7 +4,7 @@
 
 - [Visualisation development, testing and translation](#visualisation-development-testing-and-translation)
   - [Develop visualisations and interactive media for our sites](#develop-visualisations-and-interactive-media-for-our-sites)
-    - [Install Jekyll](#install-jekyll)
+    - [Install Jekyll and Git. Signup to Github.](#install-jekyll-and-git-signup-to-github)
     - [Develop interactive pieces and test them in many sites](#develop-interactive-pieces-and-test-them-in-many-sites)
     - [Collaborating with your team](#collaborating-with-your-team)
     - [Manage translations](#manage-translations)
