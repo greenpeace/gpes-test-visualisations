@@ -1,5 +1,8 @@
-title: "Test your visualisation"
-long_title: "Visualisation development, testing and translation"
 github_user: greenpeace
 github_repository: gpes-test-visualisations
 markdown: kramdown
+title: "Test your visualisation"
+long_title: "Visualisation development, testing and translation"
+lead: >
+  <p>Making visualisations or interactive content that works in many other sites can be difficult. I hope this tool will help to make it a little easier.</p>
+  <p>Here you can develop, test and translate interactive visualisations in different Greenpeace layouts. Use it to test your work in the following example pages:</p>
