@@ -88,8 +88,8 @@ In the Spanish Office we upload the html code to the media library and insert it
 
 If you need to **test your visualisations in other sites** or pages you can add more layouts to this repository. Just:
 
-- [Fork this repository](https://help.github.com/articles/fork-a-repo/) and clone your copy to your computer.
-- Add your html template inside the `_layouts` folder, just like the other ones. (I've obtained the html templates using the command `wget` with an example url from each site)
+- [Fork this repository](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) from your copy to your computer.
+- Add your html template inside the `_layouts` folder, just like the other ones. (I've obtained the html templates in this site using the command `wget` with an example url from each site)
 - Insert the code bellow in the template (in the place you want the interactive visualisation to show).
 
 ```html
