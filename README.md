@@ -55,10 +55,10 @@ Because Github also uses Jekyll, it's very easy and convenient to publish your v
 
 **To use Github pages:**
 
-1. [Create a Github repository](https://github.com/new) (or publish your local Github repository with Github desktop) 
+1. [Create a Github repository](https://github.com/new) (or publish your local Github repository with Github desktop).
 2. Enable Github pages in your repository settings (in Github).
 3. Configure your project in `_config.yml`. Your repository links will adjust to your project.
-4. Commit and push your work to your new repository
+4. Commit and push your work to your new repository.
 
 Voila! you have a testing server with an URL like: https://greenpeace.github.io/your-repository-name/ that you can send to your team.
 
