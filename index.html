@@ -24,7 +24,7 @@ layout: default
             color: gray;
         }
 
-        .raw {
+        .testGroup .raw {
             font-size: 75%;
             vertical-align: text-top;
         }
@@ -107,6 +107,15 @@ layout: default
                         <li class="pure-menu-item"><a data-click="issues-translations" href="https://github.com/{{ site.github_user }}/{{ site.github_repository }}/labels/translation" target="_blank" class="pure-menu-link" title="Translate your project here">Translation issues</a></li>
                     </ul>
                 </li>
+                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                    <a href="#" id="menuTranslate" class="pure-menu-link">Use</a>
+                    <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a data-click="raw-es" href="es/raw.html" target="_blank" class="pure-menu-link raw">Spanish</a></li>
+                        <li class="pure-menu-item"><a data-click="raw-eu" href="es/eu-raw.html" target="_blank" class="pure-menu-link raw">Basque</a></li>
+                        <li class="pure-menu-item"><a data-click="raw-ca" href="es/ca-raw.html" target="_blank" class="pure-menu-link raw">Catalan</a></li>
+                        <li class="pure-menu-item"><a data-click="raw-gl" href="es/gl-raw.html" target="_blank" class="pure-menu-link raw">Galician</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -128,13 +137,12 @@ layout: default
                     <li><a href="es/magazine.html">Magazine</a></li>
                     <li><a href="es/page.html">Page</a></li>
                     <li><a href="es/petition.html">Petition</a></li>
-                    <li><a href="es/raw.html" class="raw">Raw</a></li>
                 </ol>
                 <p class="soft">Our pages, translations</p>
                 <ol>
-                    <li><a href="es/ca-page.html">Catalan</a>, <a href="es/ca-raw.html" class="raw">raw</a></li>
-                    <li><a href="es/eu-page.html">Basque</a>, <a href="es/eu-raw.html" class="raw">raw</a></li>
-                    <li><a href="es/gl-page.html">Galician</a>, <a href="es/gl-raw.html" class="raw">raw</a></li>
+                    <li><a href="es/ca-page.html">Catalan</a>
+                    <li><a href="es/eu-page.html">Basque</a>
+                    <li><a href="es/gl-page.html">Galician</a>
                 </ol>
             </div>
         </div>
