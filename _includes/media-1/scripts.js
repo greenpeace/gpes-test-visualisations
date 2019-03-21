@@ -1,5 +1,4 @@
  document.addEventListener("DOMContentLoaded", function (t) {
-    /* BEGIN SCRIPTS */
 
     var s, e = "https://storage.googleapis.com/gpes-static/plasticos/plasticos-360.svg",
         o = "https://storage.googleapis.com/gpes-static/plasticos/plasticos-510.svg",
@@ -12,5 +11,4 @@
     var l = document.createElement("object");
     l.setAttribute("type", "image/svg+xml"), l.setAttribute("width", c), l.setAttribute("height", "auto"), l.setAttribute("data", s), g.appendChild(l)
 
-    /* END SCRIPTS */
 });
